@@ -174,17 +174,6 @@ Task Manager App/
 - Loading states and error handling
 - Intuitive navigation and user experience
 
-## 🚧 Future Enhancements
-
-- [ ] Task categories and tags
-- [ ] Due date reminders
-- [ ] Task sharing and collaboration
-- [ ] File attachments
-- [ ] Dark mode toggle
-- [ ] Export tasks to PDF/CSV
-- [ ] Mobile app version
-- [ ] Email notifications
-
 ## 🐛 Known Issues
 
 - None at the moment. If you find any bugs, please create an issue!
