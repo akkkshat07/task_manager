@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-toastify/dist/ReactToastify.css';
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input-field {
+    @apply w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary 
+      transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark 
+      transition-all duration-200 focus:outline-none focus:ring-2 
+      focus:ring-primary focus:ring-offset-2 disabled:opacity-50 
+      disabled:cursor-not-allowed flex items-center justify-center gap-2;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 
+      transition-all duration-200 focus:outline-none focus:ring-2 
+      focus:ring-gray-400 focus:ring-offset-2 disabled:opacity-50 
+      disabled:cursor-not-allowed;
+  }
+  
+  .card {
+    @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200;
+  }
+
+  .loading-shimmer {
+    @apply relative overflow-hidden;
+  }
+
+  .loading-shimmer::before {
+    @apply absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] 
+      bg-gradient-to-r from-transparent via-white/60 to-transparent;
+    content: '';
+  }
+
+  @screen sm {
+    .card {
+      @apply p-4;
+    }
+    
+    .btn-primary, .btn-secondary {
+      @apply px-3 py-1.5 text-sm;
+    }
+    
+    .input-field {
+      @apply text-base;
+    }
+  }
+}
